@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>No es el Mercado... Eres Tú | Psicotrading Pro</title>
+    <meta name="description" content="Domina tu psicología y gestión de riesgo con metodologías institucionales. Deja de quemar cuentas hoy.">
+    <meta property="og:title" content="No es el Mercado... Eres Tú | Masterclass">
+    <meta property="og:description" content="Domina tu mente, domina el mercado. Accede a la metodología institucional.">
+    <meta property="og:image" content="portada.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --zafiro-fondo: #050a14;
+            --zafiro-card: #0a192f;
+            --dorado-primario: #c5a059;
+            --dorado-brillante: #f1d279;
+            --blanco-hielo: #e6f1ff;
+            --gris-texto: #8892b0;
+            --lineas-grid: rgba(197, 160, 89, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--zafiro-fondo);
+            color: var(--blanco-hielo);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* GRID FONDO TIPO TRADINGVIEW */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(var(--lineas-grid) 1px, transparent 1px),
+                linear-gradient(90deg, var(--lineas-grid) 1px, transparent 1px);
+            background-size: 45px 45px;
+            z-index: -1;
+        }
+
+        /* CONTENEDOR HERO */
+        .hero {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            padding: 80px 20px;
+        }
+
+        .badge {
+            color: var(--dorado-primario);
+            font-weight: 700;
+            letter-spacing: 4px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+            border-bottom: 2px solid var(--dorado-primario);
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, var(--dorado-primario), var(--dorado-brillante));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.lead {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--gris-texto);
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        /* BOTONES */
+        .cta-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 30px;
+            border-radius: 5px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+
+        .btn-gold {
+            background-color: var(--dorado-primario);
+            color: var(--zafiro-fondo);
+            border: 2px solid var(--dorado-primario);
+        }
+
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--dorado-primario);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--dorado-primario);
+            color: var(--dorado-primario);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--dorado-primario);
+            color: var(--zafiro-fondo);
+        }
+
+        /* IMAGEN CON RESPLANDOR */
+        .image-side {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-side img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+        }
+
+        .image-side::after {
+            content: "";
+            position: absolute;
+            width: 60%; height: 60%;
+            background: var(--dorado-primario);
+            filter: blur(120px);
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        /* FOOTER DE CONFIANZA (Requerido para Hotmart/Ads) */
+        footer {
+            padding: 40px 20px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            font-size: 0.8rem;
+            color: #4e566d;
+            border-top: 1px solid rgba(197, 160, 89, 0.05);
+        }
+
+        .legal-links {
+            margin-bottom: 15px;
+        }
+
+        .legal-links a {
+            color: var(--gris-texto);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .legal-links a:hover {
+            color: var(--dorado-primario);
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 992px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            p.lead { margin: 0 auto 30px; }
+            .cta-group { justify-content: center; }
+            .image-side { order: -1; }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="hero">
+        <section class="content-side">
+            <span class="badge">Masterclass Psicotrading</span>
+            <h1>No es el Mercado... <br><span class="highlight">Eres Tú</span></h1>
+            <p class="lead">
+                Deja de buscar el "indicador mágico". El éxito en el trading institucional depende en un 90% de tu psicología y gestión de riesgo. Toma el control total de tus operaciones.
+            </p>
+            
+            <div class="cta-group">
+                <a href="TU_LINK_HOTMART" target="_blank" class="btn btn-gold">Acceso en Hotmart</a>
+                <a href="TU_LINK_GITHUB" target="_blank" class="btn btn-outline">Recursos GitHub</a>
+                <a href="TU_LINK_GUMROAD" target="_blank" class="btn btn-outline">Gumroad Store</a>
+            </div>
+        </section>
+
+        <section class="image-side">
+            <img src="portada-no es el mercado -eres tu.jfif" alt="Psicotrading Masterclass">
+        </section>
+    </main>
+
+    <footer>
+        <div class="legal-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos de Uso</a>
+            <a href="#">Soporte</a>
+        </div>
+        <p>&copy; 2026 Guillermo Fernández - Multidisciplinary Freelancer. <br>
+        Este sitio no forma parte de Google, Meta o YouTube. El éxito en el trading requiere disciplina y educación continua.</p>
+    </footer>
+
+</body>
+</html>
